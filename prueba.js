@@ -1,7 +1,7 @@
 window.onload = () => {
     let testEntityAdded = false;
 
-    const el = document.querySelector("[gps-new-camera]");
+    const el = document.querySelector("[gps-camera]");
 
     el.addEventListener("gps-camera-update-position", e => {
         if(!testEntityAdded) {
@@ -14,7 +14,7 @@ window.onload = () => {
                 z: 20
             });
             entity.setAttribute('material', { color: 'red' } );
-            entity.setAttribute('gps-new-entity-place', {
+            entity.setAttribute('gps-entity-place', {
                 latitude: e.detail.position.latitude + 0.001,
                 longitude: e.detail.position.longitude
             });
